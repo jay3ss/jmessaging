@@ -23,7 +23,7 @@ class jcolor:
     bright_yellow = '\33[93m'
     bright_blue = '\33[94m'
     bright_magenta = '\33[95m'
-    bright_beige = '\33[96m'
+    bright_cyan = '\33[96m'
     bright_white = '\33[97m'
 
     def __add__(cls, other):
