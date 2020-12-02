@@ -1,5 +1,6 @@
 """Simple, jcolorized messaging"""
 from jmessaging.jcolor import jcolor, jcolorize, jstyle
+from jmessaging.jprint import print_same_line
 
 
 class Messenger:
@@ -37,4 +38,4 @@ class Messenger:
         if not same_line:
             print(text)
         else:
-            print('\r', text, end='', flush=True, sep='')
+            print_same_line(text)
