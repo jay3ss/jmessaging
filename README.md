@@ -23,16 +23,16 @@ associated with the type
 
 ```python
 from jmessaging import Messenger
-from jcolor import Color, Style
+from jcolor import jcolor, jstyle
 
 messenger = Messenger()
 
-messenger.LEFT = '<'
-messenger.RIGHT = '>'
+messenger._left = '<'
+messenger._right = '>'
 
-messenger.INFO = Color.BLUE + Style.BOLD
-messenger.WARNING = Color.VIOLET + Style.BOLD
-messenger.ERROR = Color.GREEN + Style.BOLD
+messenger.info = jcolor.blue + jstyle.bold
+messenger.warning = jcolor.violet + jstyle.bold
+messenger.error = jcolor.green + jstyle.boLD
 
 messenger.info('This is a message')
 messenger.warning('This is a warning')
