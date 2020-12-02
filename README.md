@@ -18,6 +18,8 @@ would result in
 
 ![Example default output][output example]
 
+### Changing the brackets and text color
+
 The brackets around the message type can be changed along with the color
 associated with the type
 
