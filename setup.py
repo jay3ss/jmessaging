@@ -4,7 +4,6 @@ from setuptools import find_packages, setup
 
 here = pathlib.Path(__file__).parent
 readme = (here/'README.md').read_text()
-license = (here/'LICENSE').read_text()
 
 setup(
     name='jmessaging',
@@ -15,5 +14,5 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/jay3ss/jmessaging',
     packages=find_packages(),
-    license=license
+    license='MIT'
 )
