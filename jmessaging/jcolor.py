@@ -16,6 +16,7 @@ class jcolor:
     magenta = '\33[35m'
     cyan = '\33[36m'
     white = '\33[37m'
+    default = '\33[39m'
     gray = '\33[90m'
 
     bright_red = '\33[91m'
