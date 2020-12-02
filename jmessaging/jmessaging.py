@@ -1,40 +1,39 @@
-"""Simple, colorized messaging"""
-from jcolor import colorize
-from jcolor import Color, Style
+"""Simple, jcolorized messaging"""
+from jmessaging.jcolor import jcolor, jcolorize, jstyle
 
 
 class Messenger:
-    INFO = Color.WHITE + Style.BOLD
-    WARNING = Color.YELLOW + Style.BOLD
-    ERROR = Color.RED + Style.BOLD
+    _info = jcolor.white + jstyle.bold
+    _warning = jcolor.yellow + jstyle.bold
+    _error = jcolor.red + jstyle.bold
 
-    LEFT = "["
-    RIGHT = "]"
+    _left = "["
+    _right = "]"
 
-    def __init__(self, color=Color.WHITE):
+    def __init__(self, color=jcolor.default):
         self.color = color
 
     def info(self, message, same_line=False):
-        level = {"color": self.INFO, "text": "INFO"}
+        level = {"color": self._info, "text": "info"}
         self.__print(message, level, same_line)
 
     def warning(self, message, same_line=False):
-        level = {"color": self.WARNING, "text": "WARNING"}
+        level = {"color": self._warning, "text": "warning"}
         self.__print(message, level, same_line)
 
     def error(self, message, same_line=False):
-        level = {"color": self.ERROR, "text": "ERROR"}
+        level = {"color": self._error, "text": "error"}
         self.__print(message, level, same_line)
 
     def __brackets(self, level):
-        left = colorize(self.LEFT, self.color)
-        right = colorize(f"{self.RIGHT}:", self.color)
-        level_text = colorize(level["text"], level["color"])
+        left = jcolorize(self._left, self.color)
+        right = jcolorize(f"{self._right}:", self.color)
+        level_text = jcolorize(level["text"], level["color"])
         return ''.join([left, level_text, right])
 
     def __print(self, message, level, same_line):
         brackets = self.__brackets(level)
-        text = f"{brackets} {colorize(message, self.color)}"
+        text = f"{brackets} {jcolorize(message, self.color)}"
         if not same_line:
             print(text)
         else:
