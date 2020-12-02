@@ -1,4 +1,4 @@
-from .jcolor import jbackground, jcolor, jcolorize, jstyle
+from .jcolor import jbackground, jcolor, jcolorize, jprint, jstyle
 from .jmessaging import Messenger
 
 
