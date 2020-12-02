@@ -32,7 +32,7 @@ messenger._right = '>'
 
 messenger.info = jcolor.blue + jstyle.bold
 messenger.warning = jcolor.violet + jstyle.bold
-messenger.error = jcolor.green + jstyle.boLD
+messenger.error = jcolor.green + jstyle.bold
 
 messenger.info('This is a message')
 messenger.warning('This is a warning')
