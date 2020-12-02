@@ -62,6 +62,24 @@ would result in
 
 ![Example of modified background][output background]
 
+
+### Colorizing text
+
+Text can be colorized using the `jcolorize` function from the `jcolor` module
+like so
+
+```python
+import jmessaging as jm
+
+colorized = jm.jcolorize('This is text', jm.jcolor.cyan)
+print(colorized)
+```
+
+would result in
+
+![Example of colorized text][output colorized]
+
 [output example]: docs/output-example.png
 [output modified]: docs/output-modified.png
 [output background]: docs/output-background.png
+[output colorized]: docs/output-colorized.png
