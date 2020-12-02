@@ -6,9 +6,9 @@ printing colorized messages to the console a breeze.
 ## Usage
 
 ```python
-from jmessaging import Messenger
+import jmessaging as jm
 
-messenger = Messenger()
+messenger = jm.Messenger()
 messenger.info('This is a message')
 messenger.warning('This is a warning')
 messenger.error('This is an error')
@@ -22,17 +22,16 @@ The brackets around the message type can be changed along with the color
 associated with the type
 
 ```python
-from jmessaging import Messenger
-from jcolor import jcolor, jstyle
+import jmessaging as jm
 
-messenger = Messenger()
+messenger = jm.Messenger()
 
 messenger._left = '<'
 messenger._right = '>'
 
-messenger.info = jcolor.blue + jstyle.bold
-messenger.warning = jcolor.violet + jstyle.bold
-messenger.error = jcolor.green + jstyle.bold
+messenger._info = jm.jcolor.blue + jm.jstyle.bold
+messenger._warning = jm.jcolor.magenta + jm.jstyle.bold
+messenger._error = jm.jcolor.green + jm.jstyle.bold
 
 messenger.info('This is a message')
 messenger.warning('This is a warning')
