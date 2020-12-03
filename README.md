@@ -79,7 +79,31 @@ would result in
 
 ![Example of colorized text][output colorized]
 
-[output example]: docs/output-example.png
-[output modified]: docs/output-modified.png
-[output background]: docs/output-background.png
-[output colorized]: docs/output-colorized.png
+### Printing on the same line
+
+You can print on the same line repeatedly using the `print_same_line` function
+like so
+
+```python
+import time
+import jmessaging as jm
+
+for i in range(1000, 0, -1):
+    jm.print_same_line(f'Current num: {i}')
+    time.sleep(0.001)
+
+print('\n')
+```
+
+would result in
+
+![Example of printing on the same line][output same line]
+
+Notice the `print('\n')` at the end. That's necessary (or use `print()`) to move
+the cursor to the next line.
+
+[output example]: https://raw.githubusercontent.com/jay3ss/jmessaging/main/docs/output-example.png
+[output modified]: https://raw.githubusercontent.com/jay3ss/jmessaging/main/docs/output-modified.png
+[output background]: https://raw.githubusercontent.com/jay3ss/jmessaging/main/docs/output-background.png
+[output colorized]: https://raw.githubusercontent.com/jay3ss/jmessaging/main/docs/output-colorized.png
+[output same line]: https://raw.githubusercontent.com/jay3ss/jmessaging/main/docs/output-same-line.gif
