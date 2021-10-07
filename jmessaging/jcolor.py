@@ -8,6 +8,9 @@ os.system("")
 
 
 class jcolor:
+    """
+    Provides font colors for the text to be printed to the console
+    """
     black = '\33[30m'
     red = '\33[31m'
     green = '\33[32m'
@@ -32,6 +35,9 @@ class jcolor:
 
 
 class jstyle:
+    """
+    Provides styling for the text to be printed to the console
+    """
     reset = '\33[0m'
     bold = '\33[1m'
     italics = '\33[3m'
@@ -45,6 +51,9 @@ class jstyle:
 
 
 class jbackground:
+    """
+    Provides background colors for the text to be printed to the console
+    """
     black = '\33[40m'
     red = '\33[41m'
     green = '\33[42m'
@@ -68,6 +77,16 @@ class jbackground:
 
 
 def jcolorize(msg, *args):
+    """
+    [summary]
+
+    Args:
+        msg (str): the text to be colorized
+        args (str): the styles (i.e., background, font colors, and styling)
+
+    Returns:
+        str: the text with any background, font colors, and styling applied
+    """
     reset = jstyle.reset
     styles = ''.join(args)
     return styles + msg + reset
