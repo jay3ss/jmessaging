@@ -1,14 +1,6 @@
 """
 Test module for the jmessaging module
 """
-import pytest
-
-import jmessaging as jm
-
-
-@pytest.fixture
-def messenger():
-    return jm.Messenger()
 
 
 def setup_level_text(level):
