@@ -1,6 +1,17 @@
 from .jcolor import jbackground, jcolor, jcolorize, jstyle
-from .jmessaging import Messenger
+from .jmessage import Message, Messenger
 from .jprint import print_same_line
 
 
-__version__ = '0.1.0'
+__all__ = [
+    "jbackground",
+    "jcolor",
+    "jcolorize",
+    "jmessage",
+    "jprint",
+    "jstyle",
+    "print_same_line",
+    "Message",
+    "Messenger",
+]
+__version__ = '0.2.0'
