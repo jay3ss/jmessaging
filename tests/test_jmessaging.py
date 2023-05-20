@@ -1,6 +1,10 @@
 """
 Test module for the jmessaging module
 """
+import pytest
+
+import jmessaging as jm
+import jmessaging.exceptions as exc
 
 
 def setup_level_text(level):
@@ -47,3 +51,26 @@ def test_error_brackets(messenger):
     level = {"text": "error", "color": messenger._error}
     msg = messenger._Messenger__brackets(level)
     assert(msg == text)
+
+
+def test_message_defaults(message):
+    """
+    Test that the defaults in the message work
+    """
+    text = "test message"
+    assert text in message(text)
+
+
+def test_incorrect_background_raises_exception():
+    with pytest.raises(exc.InvalidBackground):
+        jm.Message(background="this color doesn't exist")
+
+
+def test_incorrect_color_raises_exception():
+    with pytest.raises(exc.InvalidColor):
+        jm.Message(color="this color doesn't exist")
+
+
+def test_incorrect_style_raises_exception():
+    with pytest.raises(exc.InvalidStyle):
+        jm.Message(style="this style doesn't exist")
