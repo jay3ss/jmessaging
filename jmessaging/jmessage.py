@@ -15,10 +15,7 @@ class Message:
     _right = "]"
 
     def __init__(
-        self,
-        color: str = "default",
-        style: str = "bold",
-        background: str = "black"
+        self, color: str = "default", style: str = "bold", background: str = "black"
     ) -> None:
         try:
             self._color = getattr(jcolor, color)
@@ -98,6 +95,7 @@ class Messenger:
     """
     Class for printing messages to the console
     """
+
     _info = jcolor.white + jstyle.bold
     _warning = jcolor.yellow + jstyle.bold
     _error = jcolor.red + jstyle.bold
@@ -168,7 +166,7 @@ class Messenger:
         left = jcolorize(self._left, self.color)
         right = jcolorize(f"{self._right}:", self.color)
         level_text = jcolorize(level["text"], level["color"])
-        return ''.join([left, level_text, right])
+        return "".join([left, level_text, right])
 
     def __print(self, message, level, same_line):
         """

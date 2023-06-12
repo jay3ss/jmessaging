@@ -9,5 +9,5 @@ def print_same_line(*msg):
 
     Got some help from https://stackoverflow.com/a/5419488
     """
-    clear = '\x1b[1K\r'
-    print(clear, *msg, end='', flush=True, sep='')
+    clear = "\x1b[1K\r"
+    print(clear, *msg, end="", flush=True, sep="")
