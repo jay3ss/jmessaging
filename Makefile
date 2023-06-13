@@ -1,4 +1,4 @@
-.PHONY: help clean clean-build clean-pyc clean-test test init init-dev
+.PHONY: help clean clean-build clean-pyc clean-test test init init-dev format coverage publish publish-test build
 TEST_PATH=./
 
 help:
@@ -37,3 +37,20 @@ test: clean
 init:
 	python -m pip install --upgrade pip
 	python -m pip install -r requirements-dev.txt
+
+format:
+	black .
+
+coverage:
+	coverage run -m pytest
+	coverage report
+	coverage html
+
+build:
+	python -m build --no-isolation --sdist --wheel
+
+publish:
+	python -m twine upload pypi dist/* --verbose
+
+publish-test:
+	python -m twine upload pypitest dist/* --verbose
