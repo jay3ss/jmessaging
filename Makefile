@@ -50,7 +50,7 @@ build:
 	python -m build --no-isolation --sdist --wheel
 
 publish:
-	python -m twine upload pypi dist/* --verbose
+	python -m twine upload -r pypi dist/* --verbose
 
 publish-test:
 	python -m twine upload pypitest dist/* --verbose
