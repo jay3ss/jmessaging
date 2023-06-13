@@ -1,5 +1,5 @@
 """Print colors to the terminal! Much inspiration taken from
-https://stackoverflow.com/questions/287871/how-to-print-colored-text-in-terminal-in-python
+https://stackoverflow.com/q/287871
 """
 import os
 
