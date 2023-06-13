@@ -2,3 +2,4 @@ black
 build
 pytest
 twine
+wheel
