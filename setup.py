@@ -5,7 +5,7 @@ from jmessaging import __version__ as version
 
 
 here = pathlib.Path(__file__).parent
-readme = (here / "README.md").read_text().splitlines()
+readme = (here / "README.md").read_text()
 extras_require = {"dev": (here / "requirements-dev.txt").read_text()}
 
 setup(
