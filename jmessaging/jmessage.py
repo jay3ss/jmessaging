@@ -1,6 +1,4 @@
 """Simple, jcolorized messaging"""
-from typing import Any
-
 import jmessaging.exceptions as exc
 from jmessaging.jcolor import jcolor, jcolorize, jstyle
 from jmessaging.jprint import print_same_line
@@ -75,7 +73,7 @@ class Message:
         colorized_text = jcolorize(text)
         return "".join([left, colorized_text, right])
 
-    def __call__(self, text: str) -> Any:
+    def __call__(self, text: str) -> str:
         brackets = self.__brackets(text)
         colorized_text = f"{brackets} {jcolorize(text, self.color)}"
         return colorized_text
@@ -185,8 +183,3 @@ class Messenger:
             print(text)
         else:
             print_same_line(text)
-
-
-if __name__ == "__main__":
-    msg = Message(color="invalid")
-    print()
